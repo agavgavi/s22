@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa6
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa6
 
 if [ ! -e backup ]; then
    echo "WARNING: a backup has been created for you in the \"backup\" folder"

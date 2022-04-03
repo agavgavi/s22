@@ -1,4 +1,4 @@
-# w22/pa5
+# s22/pa5
 
 The following is a set of performance tests to run on your Shuffle program. It
 takes three input values and compares your results to our correct model
@@ -11,7 +11,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/w22/master/pa5/pa5.sh > pa5.sh
+curl https://raw.githubusercontent.com/agavgavi/s22/master/pa5/pa5.sh > pa5.sh
 chmod +x pa5.sh
 ```
 

@@ -1,9 +1,9 @@
 #!/bin/bash
-# w22 grading
+# s22 grading
 # usage: pa3.sh
 # (run within your pa3 directory to test your code)
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa3
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa3
 
 EXE_ALL=( pa3-func-check.sh pa3-lunit-check.sh pa3-gunit-check.sh pa3-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))

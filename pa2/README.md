@@ -1,4 +1,4 @@
-# cse101-pt.w22/pa2
+# cse101-pt.s22/pa2
 
 The following is a set of performance tests to run on your FindPath program. It
 takes six example input files and compares your results to our correct model
@@ -12,7 +12,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/w22/master/pa2/pa2.sh > pa2.sh
+curl https://raw.githubusercontent.com/agavgavi/s22/master/pa2/pa2.sh > pa2.sh
 chmod +x pa2.sh
 ```
 

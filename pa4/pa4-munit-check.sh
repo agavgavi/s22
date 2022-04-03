@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 TIME=8
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa4
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa4
 
 if [ ! -e backup ]; then
   mkdir backup

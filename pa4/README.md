@@ -1,4 +1,4 @@
-# w22/pa4
+# s22/pa4
 
 The following is a set of performance tests to run on your Sparse program.
 It takes five example input files and compares your results to our correct
@@ -12,7 +12,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/w22/master/pa4/pa4.sh > pa4.sh
+curl https://raw.githubusercontent.com/agavgavi/s22/master/pa4/pa4.sh > pa4.sh
 chmod +x pa4.sh
 ```
 

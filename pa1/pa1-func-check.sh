@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa1
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa1
 NUMTESTS=3
 PNTSPERTEST=5
 let MAXPTS=$NUMTESTS*$PNTSPERTEST
@@ -22,7 +22,7 @@ echo ""
 echo ""
 
 gcc -c -std=c17 -Wall -g Lex.c List.c
-gcc -o Lex Lex.o List.o
+gcc -o -std=c17 Lex Lex.o List.o
 
 lextestspassed=$(expr 0)
 echo "Please be warned that the following tests discard all output to stdout while reserving stderr for valgrind output"

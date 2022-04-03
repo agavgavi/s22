@@ -1,9 +1,9 @@
 #!/bin/bash
-# w22 grading
+# s22 grading
 # usage: pa4.sh
 # (run within your pa4 directory to test your code)
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa4
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa4
 
 EXE_ALL=( pa4-func-check.sh pa4-lunit-check.sh pa4-munit-check.sh pa4-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))

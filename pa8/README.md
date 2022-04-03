@@ -1,4 +1,4 @@
-# cse101-pt.w22/pa8
+# cse101-pt.s22/pa8
 
 The following is a set of performance tests to run on your Order program. It
 takes three example input files and compares your results to our correct model
@@ -11,7 +11,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/cse101-pt.w22/master/pa8/pa8.sh > pa8.sh
+curl https://raw.githubusercontent.com/agavgavi/cse101-pt.s22/master/pa8/pa8.sh > pa8.sh
 chmod +x pa8.sh
 ```
 

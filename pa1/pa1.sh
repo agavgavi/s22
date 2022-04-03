@@ -1,9 +1,9 @@
 #!/bin/bash
-# cse101-pt.w22 grading
+# cse101-pt.s22 grading
 # usage: pa1.sh
 # (run within your pa1 directory to test your code)
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa1
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa1
 
 EXE_ALL=( pa1-func-check.sh pa1-unit-check.sh pa1-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))

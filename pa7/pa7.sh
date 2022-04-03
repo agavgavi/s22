@@ -1,9 +1,9 @@
 #!/bin/bash
-# w22
+# s22
 # usage: pa7.sh
 # (run within your pa7 directory to test your code)
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa7
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa7
 
 EXE_ALL=( pa7-func-check.sh pa7-unit-check.sh pa7-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))

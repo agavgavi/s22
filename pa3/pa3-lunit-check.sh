@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa3
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa3
 
 if [ ! -e backup ]; then
   mkdir backup

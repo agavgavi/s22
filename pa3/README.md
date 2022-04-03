@@ -1,4 +1,4 @@
-# w22/pa3
+# s22/pa3
 
 The following is a set of performance tests to run on your FindComponents
 program. It takes seven example input files and compares your results to our
@@ -12,7 +12,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/w22/master/pa3/pa3.sh > pa3.sh
+curl https://raw.githubusercontent.com/agavgavi/s22/master/pa3/pa3.sh > pa3.sh
 chmod +x pa3.sh
 ```
 

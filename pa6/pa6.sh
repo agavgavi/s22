@@ -1,9 +1,9 @@
 #!/bin/bash
-# w22 grading
+# s22 grading
 # usage: pa6.sh
 # (run within your pa6 directory to test your code)
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa6
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa6
 
 EXE_ALL=( pa6-func-check.sh pa6-lunit-check.sh pa6-bunit-check.sh pa6-make-check.sh )
 EXE_RANGE=$((${#EXE_ALL[*]} - 1))

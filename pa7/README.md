@@ -1,4 +1,4 @@
-# w22/pa7
+# s22/pa7
 
 The following is a set of performance tests to run on your Order program. It
 takes five example input files and compares your results to our correct model
@@ -11,7 +11,7 @@ Run the following in your working directory (the directory you wrote your code
 in) to get the test script and example input files:
 
 ```bash
-curl https://raw.githubusercontent.com/agavgavi/w22/master/pa7/pa7.sh > pa7.sh
+curl https://raw.githubusercontent.com/agavgavi/s22/master/pa7/pa7.sh > pa7.sh
 chmod +x pa7.sh
 ```
 

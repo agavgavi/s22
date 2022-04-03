@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa6
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa6
 TIME=8
 
 if [ ! -e backup ]; then

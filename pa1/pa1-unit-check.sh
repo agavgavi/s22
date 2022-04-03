@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SRCDIR=https://raw.githubusercontent.com/agavgavi/w22/master/pa1
+SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa1
 NUMTESTS=3
 PNTSPERTEST=5
 let MAXPTS=$NUMTESTS*$PNTSPERTEST
@@ -25,7 +25,7 @@ echo ""
 echo ""
 
 gcc -c -std=c17 -Wall -g ModelListTest.c List.c
-gcc -o ModelListTest ModelListTest.o List.o
+gcc -o -std=c17 ModelListTest ModelListTest.o List.o
 
 timeout 5 valgrind --leak-check=full -v ./ModelListTest -v > ListTest-out.txt 2> MemoryCheck.txt
 
