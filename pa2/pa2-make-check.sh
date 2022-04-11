@@ -2,17 +2,18 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
-
-SRCDIR=https://raw.githubusercontent.com/agavgavi/s22/master/pa2
+EXEC=FindPath
 
 echo ""
 echo ""
+echo "press Enter for make tests"
+read garbage
 
-rm -f *.o FindPath
+rm -f *.o $EXEC
 
 make
 
-if [ ! -e FindPath ] || [ ! -x FindPath ]; then # exist and executable
+if [ ! -e $EXEC ] || [ ! -x $EXEC ]; then # exist and executable
   echo ""
   echo -e "${RED}Makefile probably doesn't correctly create Executable!!!${NC}"
   echo ""
@@ -22,14 +23,12 @@ else
   echo ""
 fi
 
-echo ""
-echo ""
-
 make clean
 
-if [ -e FindPath ] || [ -e *.o ]; then
-  echo -e "${RED}WARNING: Makefile didn't successfully clean all files${NC}"
+echo ""
+echo ""
+
+
+if [ -e $EXEC ] || [ -e *.o ]; then
+   echo -e "${RED}WARNING: Makefile didn't successfully clean all files${NC}"
 fi
-
-rm -f *.o ModelListTest* ModelGraphTest* FindPath garbage
-
