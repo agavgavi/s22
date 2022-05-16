@@ -62,7 +62,7 @@ if [ "$pathtestspoints" -gt "$MAXPTS" ]; then # max 10 points
   let pathtestspoints=$(expr $MAXPTS)
 fi
 echo "Passed $pathtestspassed Sparse tests for a total of $pathtestspoints / $MAXPTS points"
-
+read verbose
 echo ""
 echo ""
 timeout $TIME valgrind --leak-check=full -v ./Sparse infile2.txt outfile2.txt > garbage 2> Sparse-mem.txt
