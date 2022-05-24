@@ -15,7 +15,7 @@ if [ ! -e backup ]; then
 fi
 
 
-cp *.c *.h Makefile backup   # copy all files of importance into backup
+cp *.cpp *.h Makefile backup   # copy all files of importance into backup
 
 for NUM in $(seq 1 $NUMTESTS); do
    curl $SRCDIR/WF-infile$NUM.txt > WF-infile$NUM.txt
