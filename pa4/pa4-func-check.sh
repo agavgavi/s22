@@ -37,19 +37,28 @@ read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
   let RUNTIME=$TIME
+  let MAXRUNTIME=$RUNTIME*3
   if [ $NUM -eq 4 ]; then
     let RUNTIME=3*$TIME
+    let MAXRUNTIME=$RUNTIME*3
   fi
-  timeout $RUNTIME ./Sparse infile$NUM.txt outfile$NUM.txt &> garbage >> garbage #all stdout/stderr thrown away
-  if [ $? -eq 124 ]; then
+  timeout $MAXRUNTIME /usr/bin/time -po time$NUM.txt ./Sparse infile$NUM.txt outfile$NUM.txt &> garbage
+  let timedOut=0
+  if [ $timedOut -eq 1 ]; then
+    let timedOut=1
     echo -e "${RED} SPARSE TEST TIMED OUT ${NC}"
   fi
+  userTime=`perl -ane 'print $F[1] if $F[0] eq "user"' time$NUM.txt`
+  tooSlow=$(echo "$userTime > $RUNTIME" |bc -l)
   diff -bBwu outfile$NUM.txt model-outfile$NUM.txt > diff$NUM.txt &>> diff$NUM.txt
   echo "Sparse Test $NUM:"
   echo "=========="
   cat diff$NUM.txt
+  if (( $tooSlow )); then
+    echo -e "${RED}SPARSE TEST TIMED OUT (Slower than $MAXTIME) ${NC}"
+  fi
   echo "=========="
-  if [ -e diff$NUM.txt ] && [[ ! -s diff$NUM.txt ]]; then # increment number of tests passed counter
+  if [ -e diff$NUM.txt ] && [[ ! -s diff$NUM.txt ]] && [[ $tooSlow -eq 0 ]] && [[ $timedOut -eq 0 ]]; then # increment number of tests passed counter
     let pathtestspassed+=1
   fi
 done
