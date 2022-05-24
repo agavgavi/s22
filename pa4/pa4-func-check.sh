@@ -43,8 +43,8 @@ for NUM in $(seq 1 $NUMTESTS); do
     let MAXRUNTIME=$RUNTIME*3
   fi
   timeout $MAXRUNTIME /usr/bin/time -po time$NUM.txt ./Sparse infile$NUM.txt outfile$NUM.txt &> garbage
-  let timedOut=0
-  if [ $timedOut -eq 1 ]; then
+  let timedOut=$?
+  if [ $timedOut -eq 124 ]; then
     let timedOut=1
     echo -e "${RED} SPARSE TEST TIMED OUT ${NC}"
   fi
