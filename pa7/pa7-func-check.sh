@@ -36,7 +36,7 @@ echo "Press enter to continue"
 read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
-  timeout 20 /usr/bin/time -po time$NUM.txt valgrind --leak-check=full -v ./Order infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt 
+  timeout 100 /usr/bin/time -po time$NUM.txt valgrind --leak-check=full -v ./Order infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt 
   if [ $? -eq 124 ]; then
     echo -e "${RED}ORDER TEST TIMED OUT ${NC}"
   fi
