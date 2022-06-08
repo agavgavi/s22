@@ -26,7 +26,7 @@ echo ""
 gcc -c -std=c17 -Wall -g ModelMatrixTest.c Matrix.c List.c
 gcc -o ModelMatrixTest ModelMatrixTest.o Matrix.o List.o
 
-timeout 20 /usr/bin/time -po time.txt valgrind --leak-check=full -v ./ModelMatrixTest -v > MatrixTest-out.txt 2> MatrixTest-mem.txt
+timeout 100 /usr/bin/time -po time.txt valgrind --leak-check=full -v ./ModelMatrixTest -v > MatrixTest-out.txt 2> MatrixTest-mem.txt
 t=$?
 userTime=`perl -ane 'print $F[1] if $F[0] eq "user"' time.txt`
 tooSlow=$(echo "$userTime > $TIME" |bc -l)
