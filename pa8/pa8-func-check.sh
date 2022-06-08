@@ -36,7 +36,7 @@ echo "Press enter to continue"
 read verbose
 for NUM in $(seq 1 $NUMTESTS); do
   rm -f outfile$NUM.txt
-  timeout 20 /usr/bin/time -po time$NUM.txt valgrind --leak-check=full -v ./Order infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt
+  timeout 20 /usr/bin/time -po time$NUM.txt valgrind --leak-check=full ./Order infile$NUM.txt outfile$NUM.txt &> valgrind-out$NUM.txt
   t=$?
   userTime=`perl -ane 'print $F[1] if $F[0] eq "user"' time$NUM.txt`
   tooSlow=$(echo "$userTime > $MAXTIME" |bc -l)
